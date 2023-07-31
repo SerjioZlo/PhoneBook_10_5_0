@@ -24,6 +24,11 @@ public class PhoneBook {
     }
 
     public String findByName(String name){
+        for(Map.Entry<String, String> entry : contacts.entrySet()) {
+            if (entry.getKey().equals(name)){
+                return entry.getValue();
+            }
+        }
         return null;
     }
 }
